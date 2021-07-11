@@ -11,7 +11,7 @@ newListForm.addEventListener('submit', function(e){
 
 function search(str) {
     for (e of sentences) {
-        if (e.en.includes(str)) return e.id
+        if (e.en.toLowerCase().includes(str.toLowerCase())) return e.id
     }
     return -1
 }
