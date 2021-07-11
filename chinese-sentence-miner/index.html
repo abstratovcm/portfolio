@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="database.js"></script>
+</head>
+<body>
+    <div>
+        <p>Mandarin Chinese<br><b>Phrases</b></p>
+    </div>  
+    <form action="" class="container" id="form" data-new-list-form>
+       
+        <input type="text" autocomplete="off" data-new-list-input id="input"/>
+        <div>
+        <button id="random-sentence" type="button">Random</a>
+        <button id="add">Search</button>
+        </div>
+    </form>
+    
+    <div id="container">
+        <div id="sentenceEn" class="sentence"></div>
+        <div id="sentenceZh" class="sentence"></div>
+    </div>
+    <script src="search.js"></script>
+    <script src="random.js"></script>
+
+</body>
+</html>
