@@ -12214,5 +12214,11 @@ const sentences = [
 		zh: "互相看了一眼",
 		pi: "hùxiāng kàn le yī yǎn",
 		en: "glanced at each other"
+	},
+	{
+		id: 2036,
+		zh: "这里什么都没有",
+		pi: "Zhèlǐ shénme dōu méiyǒu",
+		en: "There's nothing here"
 	}
 ]

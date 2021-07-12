@@ -23,12 +23,14 @@ function render(newInput) {
         sentenceZh.innerHTML = sentences[number].zh
         formInput.value = null
     }
-    else colorWarning()
+    else colorWarning(newInput)
 }
 
-function colorWarning() {
+function colorWarning(newInput) {
     root.style.setProperty('--main-color', '#e2a596')
+    formInput.value = "nothing here"
     setTimeout(function(){
         root.style.setProperty('--main-color','#96d3e2')
+        formInput.value = newInput
     },400)
 }
