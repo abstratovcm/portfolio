@@ -1,8 +1,8 @@
-const button = document.getElementById("random-sentence")
+const randomButton = document.getElementById("random-sentence")
 const sentenceEn = document.getElementById("sentenceEn")
 const sentenceZh = document.getElementById("sentenceZh")
 
-button.onclick = function() {
+randomButton.onclick = function() {
 
     while (true) {
         number = Math.floor(Math.random() * sentences.length)

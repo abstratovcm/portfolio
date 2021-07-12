@@ -1,11 +1,11 @@
-const newListForm = document.querySelector('[data-new-list-form]')
-const newListInput = document.querySelector('[data-new-list-input]')
+const form = document.getElementById('form')
+const formInput = document.getElementById('formInput')
+const root = document.querySelector(':root')
 
-newListForm.addEventListener('submit', function(e){
+form.addEventListener('submit', function(e){
     e.preventDefault()
-    const newInput = newListInput.value
+    const newInput = formInput.value
     if (newInput === null || newInput === '') return
-    newListInput.value = null
     render(newInput)
 }  )
 
@@ -21,5 +21,14 @@ function render(newInput) {
     if (number >= 0) {
         sentenceEn.innerHTML = sentences[number].en
         sentenceZh.innerHTML = sentences[number].zh
+        formInput.value = null
     }
+    else colorWarning()
+}
+
+function colorWarning() {
+    root.style.setProperty('--main-color', '#e2a596')
+    setTimeout(function(){
+        root.style.setProperty('--main-color','#96d3e2')
+    },400)
 }
