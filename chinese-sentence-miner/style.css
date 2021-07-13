@@ -2,6 +2,11 @@
     --main-color: #96d3e2;
 }
 
+::placeholder {
+    color: #78a8b4;
+    text-align: center;
+}
+
 body {
     background: #1f1f1f;
     color: var(--main-color);

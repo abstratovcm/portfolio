@@ -9,15 +9,26 @@ form.addEventListener('submit', function(e){
     render(newInput)
 }  )
 
-function search(str) {
+function searchEn(str) {
     for (e of sentences) {
         if (e.en.toLowerCase().includes(str.toLowerCase())) return e.id
     }
     return -1
 }
 
+function searchZh(str) {
+    for (e of sentences) {
+        if (e.zh.toLowerCase().includes(str.toLowerCase())) return e.id
+    }
+    return -1
+}
+
 function render(newInput) {
-    number = search(newInput)
+    if (newInput.trim()[4] != ' ') number = -1
+    else if (newInput.trim().slice(4).trim() == '' || newInput.trim().slice(4).trim() == null) number = -1
+    else if (newInput.trim().slice(0,4) == '[en]')  number = searchEn(newInput.trim().slice(5).trim())
+    else if (newInput.trim().slice(0,4) == '[zh]') number = searchZh(newInput.trim().slice(5).trim())
+    else number = -1
     if (number >= 0) {
         sentenceEn.innerHTML = sentences[number].en
         sentenceZh.innerHTML = sentences[number].zh
