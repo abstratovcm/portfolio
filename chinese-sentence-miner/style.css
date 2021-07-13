@@ -48,6 +48,7 @@ input {
     color: var(--main-color);
     font-size: 20px;
     margin-top: 30px;
+    text-align: center;
 }
 
 input:focus {
@@ -59,6 +60,7 @@ input:focus {
     border-bottom-style: solid;
     border-color: var(--main-color);
     color: var(--main-color);
+    text-align: center;
 }
 
 button {
