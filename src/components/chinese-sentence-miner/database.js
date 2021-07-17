@@ -1,4 +1,4 @@
-const sentences = [
+export const sentences = [
 	{
 		id: 0,
 		zh: "这个主意好极了",
@@ -8347,7 +8347,7 @@ const sentences = [
 	},
 	{
 		id: 1391,
-		zh: "大家都叫他\“怪叔叔\”",
+		zh: "大家都叫他\"怪叔叔\"",
 		pi: "Dàjiā dōu jiào tā \"guài shūshu\"",
 		en: "Everyone calls him \"Uncle Weirdo\""
 	},
@@ -9193,7 +9193,7 @@ const sentences = [
 	},
 	{
 		id: 1532,
-		zh: "他帮了你，你怎么不说\“谢谢\”？",
+		zh: "他帮了你，你怎么不说\"谢谢\"？",
 		pi: "Tā bāng le nǐ, nǐ zěnme bù shuō \"xièxie\"?",
 		en: "He helped you. How come you didn't say thank you?"
 	},
@@ -10321,7 +10321,7 @@ const sentences = [
 	},
 	{
 		id: 1720,
-		zh: "他认真地对我说：\“我喜欢你。\“",
+		zh: "他认真地对我说：\"我喜欢你。\"",
 		pi: "Tā rènzhēn de duì wǒ shuō: \"wǒ xǐhuan nǐ\"",
 		en: "In all seriousness, he said to me: \"I like you\""
 	},
@@ -10333,7 +10333,7 @@ const sentences = [
 	},
 	{
 		id: 1722,
-		zh: "她激动地对我说\“谢谢\”",
+		zh: "她激动地对我说\"谢谢\"",
 		pi: "Tā jīdòng de duì wǒ shuō \"xièxie\"",
 		en: "She said \"thank you\" to me excitedly"
 	},

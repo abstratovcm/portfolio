@@ -1,0 +1,30 @@
+:root {
+    --light-color: #96d3e2;
+    --dark-color: #1f1f1f;
+}
+
+.body {
+    background: var(--dark-color);
+}
+
+.title {
+    font-size: 35px;
+    font-family: FreeMono, monospace;
+    text-align: center;
+    display: inline-block;
+    color: var(--light-color);
+}
+
+.sentence {
+    font-size: 25px;
+    color: var(--light-color);
+}
+
+.container {
+    width: 550px;
+    padding: 50px;
+    margin: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
