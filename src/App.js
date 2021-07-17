@@ -3,7 +3,7 @@ import Nav from './components/nav/Nav.js';
 import ChineseSentenceMiner from './components/chinese-sentence-miner/ChineseSentenceMiner';
 import UserSearch from './components/user-search/UserSearch';
 import landingPage from './components/landing-page/landingPage';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'; 
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'; 
 import Repositories from './components/repositories/Repositories';
 
 function App() {
