@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom'
 function UserSearch() {
   const history = useHistory()
   const [usuario, setUsuario] = useState('')
+  const [erro, setErro] = useState(false)
   
   function handlePesquisa(){
     axios.get(`https://api.github.com/users/${usuario}/repos`).then(response =>{
@@ -15,14 +16,20 @@ function UserSearch() {
       repositories.map(repository => 
         repositoriesName.push(repository.name))
       localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName))
+      setErro(false)
       history.push('/repositories')
+    }).catch(err => {
+      setErro(true)
     })
   }
   return (
-    <S.Container>
-    <S.Input placeholder="helloo" value={ usuario } onChange={e => setUsuario(e.target.value)}/>
-    <S.Button type="button" onClick={handlePesquisa}>Pesquisar</S.Button>
-    </S.Container> 
+    <S.HomeContainer>
+      <S.Content>
+        <S.Input placeholder="helloo" value={ usuario } onChange={e => setUsuario(e.target.value)}/>
+        <S.Button type="button" onClick={handlePesquisa}>Pesquisar</S.Button>
+      </S.Content> 
+      {erro? <S.ErrorMsg>Nenhum usuário encontrado</S.ErrorMsg>:''}
+    </S.HomeContainer>
   );
 }
 
